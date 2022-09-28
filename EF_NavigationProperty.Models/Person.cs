@@ -21,5 +21,5 @@ public class Person
     [Required]
     public DateTime DateOfBirth { get; set; }
 
-    public List<Student> Students { get; set; }
+    public virtual List<Student> Students { get; set; }
 }

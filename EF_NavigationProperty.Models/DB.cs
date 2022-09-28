@@ -17,6 +17,6 @@ public class DB : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySQL(DbConfig.ImportFromJson("db.json").ToString());
+        optionsBuilder.UseMySQL(DbConfig.ImportFromJson("db.json").ToString()).UseLazyLoadingProxies();
     }
 }

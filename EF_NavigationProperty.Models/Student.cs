@@ -17,6 +17,6 @@ public class Student
     [Required]
     public int FacultyId { get; set; }
     
-    public Person Person { get; set; }
-    public Faculty Faculty { get; set; }
+    public virtual Person Person { get; set; }
+    public virtual Faculty Faculty { get; set; }
 }

@@ -29,17 +29,17 @@ db.TableStudents.Add(new()
 
 db.SaveChanges();*/
 
-db.TableStudents
+/*db.TableStudents
     .Include(s => s.Person)
     .Include(s => s.Faculty)
-    .ToList();
+    .ToList();*/
 
 foreach (var s in db.TableStudents.ToList())
 {
     Console.WriteLine($"{s.Person.LastName}: {s.Faculty.Name}");
 }
 
-foreach (var p in db.TablePersons)
+foreach (var p in db.TablePersons.ToList())
 {
     foreach (var student in p.Students)
     {
