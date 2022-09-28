@@ -17,6 +17,11 @@ public class Student
     [Required]
     public int FacultyId { get; set; }
     
+    [ForeignKey(nameof(PersonId))]
+    [Required]
     public virtual Person Person { get; set; }
+    
+    [ForeignKey(nameof(FacultyId))]
+    [Required]
     public virtual Faculty Faculty { get; set; }
 }

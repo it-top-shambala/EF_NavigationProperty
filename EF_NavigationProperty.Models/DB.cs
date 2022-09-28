@@ -11,7 +11,7 @@ public class DB : DbContext
 
     public DB()
     {
-        //Database.EnsureDeleted();
+        Database.EnsureDeleted();
         Database.EnsureCreated();
     }
 
