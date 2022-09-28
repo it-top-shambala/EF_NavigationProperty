@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EF_NavigationProperty.Models;
 
-[Table("table_student")]
+[Table("table_students")]
 public class Student
 {
     [Column("student_id")]
@@ -13,9 +13,10 @@ public class Student
     [Required]
     public int PersonId { get; set; }
 
-    [Column("faculty")] 
+    [Column("faculty_id")] 
     [Required]
-    public string Faculty { get; set; }
+    public int FacultyId { get; set; }
     
     public Person Person { get; set; }
+    public Faculty Faculty { get; set; }
 }
